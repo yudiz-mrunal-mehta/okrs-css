@@ -31,24 +31,24 @@ function Compare() {
       price: '₹1.61 - 1.66 Lakh',
       onRoad: 'On road price in Ahmedabad',
     },
-    {
+    /* {
       id: '3',
       img: { car1 },
       title: 'TVS iQube Electric',
       price: '₹1.61 - 1.66 Lakh',
       onRoad: 'On road price in Ahmedabad',
-    },
+    }, */
   ];
   return (
     <div
       className={`compare-wrapper text-start row m-0 mt-3 ${inter.className}`}
     >
-      <div className='category-section col-md-4 border rounded px-2'>
+      <div className='category-section col-4-custom  border rounded px-2'>
         <div className='px-3 mt-3 '>
           <h3>Categories</h3>
           <hr />
         </div>
-        <div className='categories-scroll px-3'>
+        <div className='categories-scroll px-3 mb-3'>
           {checkBox?.length > 0
             ? checkBox.map((spec, idx) => (
                 <>
@@ -62,14 +62,15 @@ function Compare() {
             : null}
         </div>
       </div>
-      <div className='compare-vehicle-card col-md-8 parent-compare m-0'>
+      <div className='compare-vehicle-card col-8-custom parent-compare m-0 px-custom custom-border-mobile'>
         {compareData?.length > 0
-          ? compareData.map((data) => (
+          ? compareData.map((data, idx) => (
               <CompareCard
                 img={data.img}
                 title={data.title}
                 price={data.price}
                 onRoad={data.onRoad}
+                idx={idx}
               />
             ))
           : null}

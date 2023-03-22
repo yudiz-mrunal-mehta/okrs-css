@@ -12,11 +12,9 @@ function index() {
         <Blog />
       </Tab>
       <Tab eventKey='profile' title='News'>
-        {/* <Sonnet /> */}
         <News />
       </Tab>
       <Tab eventKey='contact' title='Compare'>
-        {/* <Sonnet /> */}
         <Compare />
       </Tab>
     </Tabs>

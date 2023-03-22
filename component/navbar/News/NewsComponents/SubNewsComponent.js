@@ -3,7 +3,6 @@ import React from 'react';
 import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 function SubNewsComponent({ idx, img, title, description }) {
-  console.log('idx', idx);
   return (
     <>
       <div className={`sub-news-wrapper row m-0 ${inter.className}`}>
